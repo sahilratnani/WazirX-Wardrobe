@@ -6,4 +6,9 @@
 //  Copyright © 2021 Sahil Ratnani. All rights reserved.
 //
 
-import Foundation
+import UIKit
+
+class ShirtCollectionViewCell: UICollectionViewCell {
+    
+    @IBOutlet weak var imageView: UIImageView!
+}

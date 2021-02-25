@@ -1,24 +1,202 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Home View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="HomeViewController" customModule="Wardrobe" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="I4W-bw-AS5">
+                                <rect key="frame" x="20" y="52" width="374" height="802"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hIS-Yx-AyY">
+                                        <rect key="frame" x="8" y="46" width="358" height="710"/>
+                                        <subviews>
+                                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="7DG-hr-EDo" userLabel="ShirtCollectionView">
+                                                <rect key="frame" x="41" y="8" width="276" height="354"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="0.0" id="Olq-rG-X3L">
+                                                    <size key="itemSize" width="261" height="299"/>
+                                                    <size key="estimatedItemSize" width="132" height="117"/>
+                                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                </collectionViewFlowLayout>
+                                                <cells>
+                                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="shirtCell" id="wez-jm-ueD" customClass="ShirtCollectionViewCell" customModule="Wardrobe" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="27.666666666666668" width="261" height="299"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="btU-cz-WbJ">
+                                                            <rect key="frame" x="0.0" y="0.0" width="261" height="299"/>
+                                                            <autoresizingMask key="autoresizingMask"/>
+                                                            <subviews>
+                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hPk-FG-5IP">
+                                                                    <rect key="frame" x="24" y="21.666666666666657" width="213" height="255.99999999999997"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="width" constant="213" id="6rB-EY-10q"/>
+                                                                        <constraint firstAttribute="height" constant="256" id="sNb-GJ-FbY"/>
+                                                                    </constraints>
+                                                                </imageView>
+                                                            </subviews>
+                                                            <constraints>
+                                                                <constraint firstItem="hPk-FG-5IP" firstAttribute="centerX" secondItem="btU-cz-WbJ" secondAttribute="centerX" id="Dk0-wO-Yge"/>
+                                                                <constraint firstItem="hPk-FG-5IP" firstAttribute="centerY" secondItem="btU-cz-WbJ" secondAttribute="centerY" id="sL0-6d-WGp"/>
+                                                            </constraints>
+                                                        </collectionViewCellContentView>
+                                                        <size key="customSize" width="261" height="299"/>
+                                                        <connections>
+                                                            <outlet property="imageView" destination="hPk-FG-5IP" id="M5z-es-dAM"/>
+                                                        </connections>
+                                                    </collectionViewCell>
+                                                </cells>
+                                            </collectionView>
+                                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="oHC-DA-3rq" userLabel="PantCollectionView">
+                                                <rect key="frame" x="41" y="362" width="276" height="333"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="0.0" id="xbh-ZY-Y5m">
+                                                    <size key="itemSize" width="261" height="299"/>
+                                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                </collectionViewFlowLayout>
+                                                <cells>
+                                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="pantCell" id="He3-Lw-TcD" customClass="PantCollectionViewCell" customModule="Wardrobe" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="17" width="261" height="299"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="c7J-dY-wNF">
+                                                            <rect key="frame" x="0.0" y="0.0" width="261" height="299"/>
+                                                            <autoresizingMask key="autoresizingMask"/>
+                                                            <subviews>
+                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="EbZ-yJ-kNy">
+                                                                    <rect key="frame" x="24" y="21.666666666666657" width="213" height="255.99999999999997"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="height" constant="256" id="78l-Em-xtY"/>
+                                                                        <constraint firstAttribute="width" constant="213" id="uXN-sv-Cyq"/>
+                                                                    </constraints>
+                                                                </imageView>
+                                                            </subviews>
+                                                            <constraints>
+                                                                <constraint firstItem="EbZ-yJ-kNy" firstAttribute="centerX" secondItem="c7J-dY-wNF" secondAttribute="centerX" id="NAe-oR-Mmj"/>
+                                                                <constraint firstItem="EbZ-yJ-kNy" firstAttribute="centerY" secondItem="c7J-dY-wNF" secondAttribute="centerY" id="wST-7j-ZZK"/>
+                                                            </constraints>
+                                                        </collectionViewCellContentView>
+                                                        <size key="customSize" width="261" height="299"/>
+                                                        <connections>
+                                                            <outlet property="imageView" destination="EbZ-yJ-kNy" id="4Cl-hP-cBc"/>
+                                                        </connections>
+                                                    </collectionViewCell>
+                                                </cells>
+                                            </collectionView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j6x-j4-RlU" userLabel="addShirt">
+                                                <rect key="frame" x="8" y="8" width="25" height="25"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="25" id="NU1-hO-Q4L"/>
+                                                    <constraint firstAttribute="height" constant="25" id="WAa-x0-ThT"/>
+                                                </constraints>
+                                                <state key="normal" image="plus" catalog="system">
+                                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="addNewShirt:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GzZ-j8-V6L"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mTd-TT-WC1" userLabel="addPant">
+                                                <rect key="frame" x="8" y="374" width="25" height="25"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="25" id="Edz-Gc-Keu"/>
+                                                    <constraint firstAttribute="width" constant="25" id="JlP-JH-6Mc"/>
+                                                </constraints>
+                                                <state key="normal" image="plus" catalog="system">
+                                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="addNewPant:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WMi-AL-7gl"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="7DG-hr-EDo" firstAttribute="leading" secondItem="j6x-j4-RlU" secondAttribute="trailing" constant="8" id="2jJ-Km-bZf"/>
+                                            <constraint firstItem="7DG-hr-EDo" firstAttribute="width" secondItem="oHC-DA-3rq" secondAttribute="width" id="9E3-1v-LpF"/>
+                                            <constraint firstItem="mTd-TT-WC1" firstAttribute="leading" secondItem="hIS-Yx-AyY" secondAttribute="leading" constant="8" id="AmR-FH-GvH"/>
+                                            <constraint firstItem="j6x-j4-RlU" firstAttribute="top" secondItem="7DG-hr-EDo" secondAttribute="top" id="ScC-vi-vp9"/>
+                                            <constraint firstItem="7DG-hr-EDo" firstAttribute="height" secondItem="oHC-DA-3rq" secondAttribute="height" multiplier="1.06306" id="UGJ-b8-gGt"/>
+                                            <constraint firstItem="oHC-DA-3rq" firstAttribute="top" secondItem="7DG-hr-EDo" secondAttribute="bottom" id="anI-Fl-zs9"/>
+                                            <constraint firstAttribute="trailing" secondItem="oHC-DA-3rq" secondAttribute="trailing" constant="41" id="cHo-qo-8Rr"/>
+                                            <constraint firstItem="7DG-hr-EDo" firstAttribute="top" secondItem="hIS-Yx-AyY" secondAttribute="top" constant="8" id="cxU-t8-x7g"/>
+                                            <constraint firstItem="oHC-DA-3rq" firstAttribute="leading" secondItem="mTd-TT-WC1" secondAttribute="trailing" constant="8" id="fTJ-E7-2te"/>
+                                            <constraint firstAttribute="bottom" secondItem="oHC-DA-3rq" secondAttribute="bottom" constant="15" id="ppt-Ab-wtx"/>
+                                            <constraint firstItem="mTd-TT-WC1" firstAttribute="top" secondItem="oHC-DA-3rq" secondAttribute="top" constant="12" id="t6Y-Gs-N1p"/>
+                                            <constraint firstItem="j6x-j4-RlU" firstAttribute="leading" secondItem="hIS-Yx-AyY" secondAttribute="leading" constant="8" id="vXG-oz-PAm"/>
+                                        </constraints>
+                                    </view>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HBN-3E-Bct" userLabel="shuffle">
+                                        <rect key="frame" x="132" y="764" width="30" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="D5v-zb-ePu"/>
+                                            <constraint firstAttribute="width" constant="30" id="twj-F1-Kb9"/>
+                                        </constraints>
+                                        <state key="normal" image="shuffle" catalog="system"/>
+                                        <connections>
+                                            <action selector="shuffleCombination:" destination="BYZ-38-t0r" eventType="touchUpInside" id="akN-fT-RB1"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rrv-kV-4Sd" userLabel="favourite">
+                                        <rect key="frame" x="212" y="764" width="30" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="VGz-Dd-MiC"/>
+                                            <constraint firstAttribute="width" constant="30" id="g8e-Mv-U4z"/>
+                                        </constraints>
+                                        <state key="normal" image="heart" catalog="system"/>
+                                        <connections>
+                                            <action selector="addFavourite:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JFu-sZ-bMp"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="HBN-3E-Bct" secondAttribute="bottom" constant="8" id="2wT-gn-mJh"/>
+                                    <constraint firstItem="rrv-kV-4Sd" firstAttribute="centerX" secondItem="I4W-bw-AS5" secondAttribute="centerX" constant="40" id="DZU-Tm-0Ui"/>
+                                    <constraint firstAttribute="bottom" secondItem="rrv-kV-4Sd" secondAttribute="bottom" constant="8" id="Ddn-bt-iDc"/>
+                                    <constraint firstAttribute="trailing" secondItem="hIS-Yx-AyY" secondAttribute="trailing" constant="8" id="E43-MV-NRH"/>
+                                    <constraint firstItem="HBN-3E-Bct" firstAttribute="top" secondItem="hIS-Yx-AyY" secondAttribute="bottom" constant="8" id="LDc-6Z-jec"/>
+                                    <constraint firstItem="hIS-Yx-AyY" firstAttribute="top" secondItem="I4W-bw-AS5" secondAttribute="top" constant="46" id="NP3-Cd-ULS"/>
+                                    <constraint firstItem="HBN-3E-Bct" firstAttribute="centerX" secondItem="I4W-bw-AS5" secondAttribute="centerX" constant="-40" id="PH6-B0-vru"/>
+                                    <constraint firstItem="hIS-Yx-AyY" firstAttribute="leading" secondItem="I4W-bw-AS5" secondAttribute="leading" constant="8" id="dQH-fC-uRd"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="I4W-bw-AS5" secondAttribute="bottom" constant="8" id="987-D6-XlE"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="I4W-bw-AS5" secondAttribute="trailing" constant="20" id="9TI-Qu-mdq"/>
+                            <constraint firstItem="I4W-bw-AS5" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="8" id="Ftc-Ja-UaK"/>
+                            <constraint firstItem="I4W-bw-AS5" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="dNv-pc-0rC"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="favouriteButton" destination="rrv-kV-4Sd" id="BYh-kA-sXr"/>
+                        <outlet property="pantCollectionView" destination="oHC-DA-3rq" id="UXT-xV-Mzw"/>
+                        <outlet property="shirtCollectionView" destination="7DG-hr-EDo" id="EbD-EL-ban"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="118.84057971014494" y="118.52678571428571"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="heart" catalog="system" width="128" height="109"/>
+        <image name="plus" catalog="system" width="128" height="113"/>
+        <image name="shuffle" catalog="system" width="128" height="93"/>
+    </resources>
 </document>

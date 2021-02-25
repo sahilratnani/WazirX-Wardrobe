@@ -6,4 +6,12 @@
 //  Copyright © 2021 Sahil Ratnani. All rights reserved.
 //
 
-import Foundation
+class Dress: Codable {
+    let shirt: ShirtPantModel
+    let pant: ShirtPantModel
+
+    init(shirt: ShirtPantModel, pant: ShirtPantModel) {
+        self.shirt = shirt
+        self.pant = pant
+    }
+}

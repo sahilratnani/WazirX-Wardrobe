@@ -6,4 +6,9 @@
 //  Copyright © 2021 Sahil Ratnani. All rights reserved.
 //
 
-import Foundation
+protocol DataUpdatable {
+    func shirtsUpdate(shirts: [ShirtPantModel])
+    func pantsUpdated(pants: [ShirtPantModel])
+    func favouritesUpdate(dresses: [Dress])
+    func updateFailed()
+}
